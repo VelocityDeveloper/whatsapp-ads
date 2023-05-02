@@ -27,3 +27,32 @@ a.button-green:visited {
   background-color: #00a952;
   border: 1px solid #00a952;
 }
+
+.whatsapp-ads-floating {
+  position: fixed;
+  bottom: 55px;
+  right: 7px;
+  z-index: 999;
+  background: #25d366;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+.whatsapp-ads-floating svg {
+  margin-top: -4px;
+}
+.whatsapp-ads-floating a {
+  color: #fff;
+  text-decoration: none;
+}
+.whatsapp-ads-floating:hover {
+  transform: scale(1.02);
+}
+.whatsapp-floating.floating-button {
+  display: none !important;
+}
