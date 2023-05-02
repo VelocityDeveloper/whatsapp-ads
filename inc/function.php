@@ -53,7 +53,7 @@
 
 		<div class="wrap">
 			<h2>Whatsapp Ads</h2>
-			<p>Velocity Whatsapp Setting</p>
+			<p>Velocity Whatsapp Setting. Untuk menampilkan link whatsapp dengan kondisi dibawah bisa menggunakan shortcode [link-whatsapp]</p>
 			<?php settings_errors(); ?>
 
 			<form method="post" action="options.php">
