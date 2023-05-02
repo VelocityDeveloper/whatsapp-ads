@@ -49,7 +49,7 @@
 	}
 
 	public function whatsapp_ads_create_admin_page() {
-		$this->whatsapp_ads_options = get_option( 'whatsapp_ads_option_name' ); ?>
+		$this->whatsapp_ads_options = get_option( 'whatsapp_ads' ); ?>
 
 		<div class="wrap">
 			<h2>Whatsapp Ads</h2>
@@ -69,7 +69,7 @@
 	public function whatsapp_ads_page_init() {
 		register_setting(
 			'whatsapp_ads_option_group', // option_group
-			'whatsapp_ads_option_name', // option_name
+			'whatsapp_ads', // option_name
 			array( $this, 'whatsapp_ads_sanitize' ) // sanitize_callback
 		);
 
@@ -128,21 +128,21 @@
 
 	public function no_whatsapp_0_callback() {
 		printf(
-			'<input class="regular-text" type="text" name="whatsapp_ads_option_name[no_whatsapp_0]" id="no_whatsapp_0" value="%s">',
+			'<input class="regular-text" type="text" name="whatsapp_ads[no_whatsapp_0]" id="no_whatsapp_0" value="%s">',
 			isset( $this->whatsapp_ads_options['no_whatsapp_0'] ) ? esc_attr( $this->whatsapp_ads_options['no_whatsapp_0']) : ''
 		);
 	}
 
 	public function tampilkan_whatsapp_melayang_1_callback() {
 		printf(
-			'<input type="checkbox" name="whatsapp_ads_option_name[tampilkan_whatsapp_melayang_1]" id="tampilkan_whatsapp_melayang_1" value="tampilkan_whatsapp_melayang_1" %s> <label for="tampilkan_whatsapp_melayang_1">Juka di centang akan menampilkan tombol whatsapp melayang di pojok kanan.</label>',
+			'<input type="checkbox" name="whatsapp_ads[tampilkan_whatsapp_melayang_1]" id="tampilkan_whatsapp_melayang_1" value="tampilkan_whatsapp_melayang_1" %s> <label for="tampilkan_whatsapp_melayang_1">Juka di centang akan menampilkan tombol whatsapp melayang di pojok kanan.</label>',
 			( isset( $this->whatsapp_ads_options['tampilkan_whatsapp_melayang_1'] ) && $this->whatsapp_ads_options['tampilkan_whatsapp_melayang_1'] === 'tampilkan_whatsapp_melayang_1' ) ? 'checked' : ''
 		);
 	}
 
 	public function arahkan_ke_form_chat_2_callback() {
 		printf(
-			'<input type="checkbox" name="whatsapp_ads_option_name[arahkan_ke_form_chat_2]" id="arahkan_ke_form_chat_2" value="arahkan_ke_form_chat_2" %s> <label for="arahkan_ke_form_chat_2">Jika di centang semua link whatsapp perlu validasi dengan mengisi data form.</label>',
+			'<input type="checkbox" name="whatsapp_ads[arahkan_ke_form_chat_2]" id="arahkan_ke_form_chat_2" value="arahkan_ke_form_chat_2" %s> <label for="arahkan_ke_form_chat_2">Jika di centang semua link whatsapp perlu validasi dengan mengisi data form.</label>',
 			( isset( $this->whatsapp_ads_options['arahkan_ke_form_chat_2'] ) && $this->whatsapp_ads_options['arahkan_ke_form_chat_2'] === 'arahkan_ke_form_chat_2' ) ? 'checked' : ''
 		);
 	}
@@ -153,7 +153,7 @@ if ( is_admin() )
 
 /* 
  * Retrieve this value with:
- * $whatsapp_ads_options = get_option( 'whatsapp_ads_option_name' ); // Array of All Options
+ * $whatsapp_ads_options = get_option( 'whatsapp_ads' ); // Array of All Options
  * $no_whatsapp_0 = $whatsapp_ads_options['no_whatsapp_0']; // No. Whatsapp
  * $tampilkan_whatsapp_melayang_1 = $whatsapp_ads_options['tampilkan_whatsapp_melayang_1']; // Tampilkan Whatsapp melayang
  * $arahkan_ke_form_chat_2 = $whatsapp_ads_options['arahkan_ke_form_chat_2']; // Arahkan Ke form Chat
