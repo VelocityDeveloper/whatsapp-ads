@@ -1,12 +1,29 @@
-.input-chat {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.input-chat input {
-  padding: 5px 15px;
-  margin: 0 0 20px;
-  width: 100%;
+.input-control {
+  padding: 10px 20px;
+  border-radius: 5px;
   border: 1px solid #ddd;
-  border-radius: 7px;
+  width: 100%;
+  margin: 0 0 20px;
+}
+.input-chat {
+  margin: 0 auto;
+  max-width: 400px;
+}
+a.button-green,
+a.button-green:visited {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  display: inline-block;
+}
+.disable {
+  pointer-events: none;
+  background-color: #999999;
+  border: 1px solid #999999;
+}
+.enable {
+  background-color: #00a952;
+  border: 1px solid #00a952;
 }
