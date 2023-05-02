@@ -1,0 +1,12 @@
+.input-chat {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-chat input {
+  padding: 5px 15px;
+  margin: 0 0 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
