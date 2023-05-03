@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.whatsapp-ads-floating {
+  font-family: "Poppins", sans-serif;
+}
 .input-control {
   padding: 10px 20px;
   border-radius: 5px;
@@ -47,12 +51,15 @@ a.button-green:visited {
   margin-top: -4px;
 }
 .whatsapp-ads-floating a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
-.whatsapp-ads-floating:hover {
-  transform: scale(1.02);
+.whatsapp-ads-floating a:hover {
+  color: #fff;
 }
-.whatsapp-floating.floating-button {
+.whatsapp-ads-floating:hover {
+  background-color: #157347;
+}
+.floating-footer .whatsapp-floating {
   display: none !important;
 }
