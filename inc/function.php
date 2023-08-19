@@ -221,3 +221,26 @@ if(! function_exists('wp_footer_whatsapp')){
         }
     }
 }
+
+// Fungsi untuk menambahkan custom page template
+function custom_page_templates_plugin() {
+    $plugin_path = plugin_dir_path(__FILE__);
+    $template_dir = $plugin_path . 'templates/';
+
+    $templates = array(
+        'page-blank.php' => 'Page Blank Template',
+    );
+
+    foreach ($templates as $template_file => $template_name) {
+        add_filter('theme_page_templates', function ($templates) use ($template_file, $template_name) {
+            $templates[$template_file] = $template_name;
+            return $templates;
+        });
+        add_filter('page_template_hierarchy', function ($templates) use ($template_dir, $template_file) {
+            array_unshift($templates, $template_dir . $template_file);
+            return $templates;
+        });
+    }
+}
+
+add_action('plugins_loaded', 'custom_page_templates_plugin');
