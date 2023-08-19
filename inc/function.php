@@ -204,7 +204,7 @@ if(! function_exists('wp_footer_whatsapp')){
 			$no_whatsapp = 'https://wa.me/'.$no_whatsapp;
 			$target = '_blank';
 		}
-        if($tampilkan_whatsapp_melayang_1) {
+        if($tampilkan_whatsapp_melayang_1 && wp_is_mobile()) {
             ?>
             <div class="whatsapp-ads-floating whatsapp-floating floating-button right scroll-active scroll-right pull-left">
                 <a href="<?php echo $no_whatsapp; ?>" target="<?php echo $target; ?>">
