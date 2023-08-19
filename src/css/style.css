@@ -64,3 +64,6 @@ a.button-green:visited {
 .floating-footer .whatsapp-floating {
   display: none !important;
 }
+.wa-float {
+  display: none !important;
+}
