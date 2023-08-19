@@ -221,14 +221,13 @@ if(! function_exists('wp_footer_whatsapp')){
         }
     }
 }
-
 // Fungsi untuk menambahkan custom page template
 function custom_page_templates_plugin() {
     $plugin_path = plugin_dir_path(__FILE__);
     $template_dir = $plugin_path . 'templates/';
 
     $templates = array(
-        'page-blank.php' => 'Page Blank Template',
+        'page-blank.php' => 'Ads Blank Template',
     );
 
     foreach ($templates as $template_file => $template_name) {
